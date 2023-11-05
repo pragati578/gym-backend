@@ -2,11 +2,11 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ThrottlerModule } from '@nestjs/throttler';
-import { OtpModule } from './otp/otp.module';
-import { AuthModule } from './auth/auth.module';
-import { UserModule } from './user/user.module';
-import { MembershipModule } from './membership/membership.module';
-import { PostModule } from './post/post.module';
+import { OtpModule } from './modules/otp/otp.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { UserModule } from './modules/user/user.module';
+import { MembershipModule } from './modules/membership/membership.module';
+import { PostModule } from './modules/post/post.module';
 
 @Module({
   imports: [

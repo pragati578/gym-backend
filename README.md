@@ -1,73 +1,64 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Gym Website Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Project Overview
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This is the backend codebase for a gym website. It is built using NestJS, a powerful web framework for building scalable server-side applications. The project also utilizes Prisma as an ORM for PostgreSQL to interact with the database. The authentication is handled using JWT (JSON Web Tokens) through `@nestjs/jwt` and `@nestjs/passport`.
 
-## Description
+## Project Structure
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The project is organized as follows:
 
-## Installation
+- **src**: Contains the source code for the NestJS application.
+  - **modules**: Application modules (e.g., authentication, user, membership, posts).
+  - **common**: Reusable modules or utilities.
+- **prisma**: Prisma configuration and database schema.
 
-```bash
-$ pnpm install
-```
+## Scripts
 
-## Running the app
+- **build**: Build the NestJS application.
+- **format**: Format code using Prettier.
+- **start**: Start the NestJS application.
+- **start:dev**: Start the application in development mode with watch mode.
+- **start:debug**: Start the application in debug mode with watch mode.
+- **start:prod**: Start the application in production mode.
+- **prisma:studio**: Open Prisma Studio for database visualization.
+- **prisma:generate**: Generate Prisma client.
+- **prisma:mig**: Run database migration and generate Prisma client.
 
-```bash
-# development
-$ pnpm run start
+## Dependencies
 
-# watch mode
-$ pnpm run start:dev
+- **NestJS**: Core modules and libraries for building NestJS applications.
+- **Prisma**: Database ORM for PostgreSQL.
+- **Passport**: Authentication middleware for NestJS.
+- **JWT**: JSON Web Token implementation for NestJS.
+- **Argon2**: Password hashing library.
+- **Prisma Client**: Auto-generated client for Prisma.
+- **Express**: Web application framework.
+- **Helmet**: Security middleware.
+- **Multer**: File uploading middleware.
+- **Nodemailer**: Email sending library.
+- **UUID**: Library for generating UUIDs.
 
-# production mode
-$ pnpm run start:prod
-```
+## Development Dependencies
 
-## Test
+- **NestJS CLI**: Command-line interface for NestJS.
+- **TypeScript**: Typed superset of JavaScript.
+- **ESLint**: Linting utility.
+- **Prettier**: Code formatter.
+- **Prisma CLI**: Command-line interface for Prisma.
 
-```bash
-# unit tests
-$ pnpm run test
+## Database Schema
 
-# e2e tests
-$ pnpm run test:e2e
+The database schema includes entities such as User, Membership, UserMembership, Posts, Comments, etc. Users can have memberships, create posts, and leave comments. The schema also handles email changes, password resets, and OTPs for various purposes.
 
-# test coverage
-$ pnpm run test:cov
-```
+## Getting Started
 
-## Support
+1. Install dependencies: `npm install` or `pnpm install`.
+2. Set up the database URL in the `.env` file.
+3. Run database migrations: `npm run prisma:mig`.
+4. Generate Prisma client: `npm run prisma:generate`.
+5. Start the application in development mode: `npm run start:dev`.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Database Operations
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Open Prisma Studio: `npm run prisma:studio`.

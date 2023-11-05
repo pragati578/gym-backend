@@ -1,4 +1,4 @@
-import { Comments } from './../../node_modules/.pnpm/@prisma+client@5.5.2_prisma@5.5.2/node_modules/.prisma/client/index.d';
+import { Comments } from '.pnpm/@prisma+client@5.5.2_prisma@5.5.2/node_modules/.prisma/client';
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';

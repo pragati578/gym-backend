@@ -17,7 +17,7 @@ import {
   VerifyEmailRequest,
 } from './dtos/auth.dto';
 import * as argon from 'argon2';
-import { OtpService } from 'src/otp/otp.service';
+import { OtpService } from 'src/modules/otp/otp.service';
 import { JWT } from 'src/constant';
 import { PrismaService } from 'src/common/@services/prisma.service';
 import { sendMail } from 'src/common/@helpers/mail';
